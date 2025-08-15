@@ -2,7 +2,8 @@
 - name: Manage Kiosk Configuration
   hosts: all
   become: yes
-
+  vars:
+    new_url: "https://google.com"
   tasks:
     - name: Update the KIOSK_URL in the kiosk.env file
       ansible.builtin.lineinfile:
