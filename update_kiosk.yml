@@ -1,0 +1,11 @@
+---
+- name: Manage Kiosk Configuration
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Update the KIOSK_URL in the kiosk.env file
+      ansible.builtin.lineinfile:
+        path: /etc/kiosk.env
+        regexp: '^KIOSK_URL='
+        line: 'KIOSK_URL="{{ new_url }}"'
