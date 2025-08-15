@@ -8,4 +8,4 @@
       ansible.builtin.lineinfile:
         path: /etc/kiosk.env
         regexp: '^KIOSK_URL='
-        line: 'KIOSK_URL="{{ "https://google.com" }}"'
+        line: 'KIOSK_URL="{{ new_url }}"'
