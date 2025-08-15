@@ -3,7 +3,7 @@
   hosts: all
   become: yes
   vars:
-    new_url: "https://google.com"
+    new_url: "https://www.pointclickcare.com/poc/userLogin.xhtml"
   tasks:
     - name: Update the KIOSK_URL in the kiosk.env file
       ansible.builtin.lineinfile:
