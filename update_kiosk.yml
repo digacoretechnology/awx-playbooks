@@ -1,7 +1,7 @@
 ---
 - name: Manage Kiosk Configuration
   hosts: all
-  
+  become: yes
 
   tasks:
     - name: Update the KIOSK_URL in the kiosk.env file
